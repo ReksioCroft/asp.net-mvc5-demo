@@ -1,0 +1,46 @@
+﻿@model DevHacks.Models.Article
+
+@{
+    ViewBag.Title = "EditPage";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Edit Article</div>
+
+    <div class="panel-body">
+        @using (Html.BeginForm(actionName: "Edit", controllerName: "Article"))
+        {
+
+            @Html.HttpMethodOverride(HttpVerbs.Put)
+
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+            @Html.Hidden("ArticleId")
+
+            @Html.Label("ArticleName", "Nume Articol")
+            <br />
+            @Html.Editor("ArticleName")
+            @Html.ValidationMessageFor(m => m.ArticleName, null, new { @class = "text-danger" })
+
+            <br />
+            <br />
+            @Html.Label("ArticleContent", "Continut articol")
+            <br />
+            @Html.EditorFor(m => m.ArticleContent, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(m => m.ArticleContent, null, new { @class = "text-danger" })
+
+            <br />
+            @Html.Hidden("ArticleDate")
+            <br />
+
+            @Html.Label("Selectati Categoria")
+
+            @Html.DropDownListFor(m => m.CategoryId, new SelectList(Model.Categ, "Value", "Text"), "Selectati categoria", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.CategoryId, null, new { @class = "text-danger" })
+
+            <br /><br />
+
+            <button class="btn btn-success" type="submit">Modifica articol</button>
+        }
+    </div>
+</div>

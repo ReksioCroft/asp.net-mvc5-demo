@@ -1,0 +1,45 @@
+﻿<h1 style="text-align:center; font-size: 55px">Intrebari</h1>
+<br />
+<br />
+<br />
+
+@model DevHacks.Models.Question
+<div class="text-success">@ViewBag.Message</div>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Afisare Intrebari</div>
+    <div class="panel-body">
+
+        <div class="panel panel-default " style="padding:10px">
+            <div>
+                <a class="btn btn-primary btn btn-sm" href="/Question/New" style="float:right; margin-top:30px"> Adauga intrebare </a>
+
+                <form method="post" action="/Question/Index2">
+                    @Html.Label("Selectati categoria")
+                    @Html.DropDownListFor(m => m.CategoryId, new SelectList(Model.Categ, "Value", "Text"), "Afisati toate intrebarile", new { @class = "form-control" })
+                    <button type="submit" class="btn btn-primary btn btn-sm" style="margin-top:-60px; margin-left:300px">Afiseaza intrebari</button>
+                </form>
+            </div>
+        </div>
+        @foreach (var a in ViewBag.Questions)
+        {
+            <br />
+            <div class="panel panel-default">
+                <div class="panel-heading"> @a.QuestionTitle</div>
+                <div class="panel-body">
+                    <p>@a.QuestionContent</p>
+                    <p>@a.Category.CategoryName </p>
+                </div>
+                <div class="panel panel-footer" style="margin-bottom:0px">
+                    <a class="btn btn-success btn btn-sm" href="/Question/Show/@a.QuestionId">Afisare intrebare</a>
+                    <p style="font-size:small;" class="pull-right"> Data: @a.QuestionDate</p>
+                </div>
+            </div>
+        }
+
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-primary btn-sm" href="/Home">Pagina principala</a>
+    </div>
+</div>

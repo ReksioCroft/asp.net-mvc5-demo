@@ -1,0 +1,24 @@
+﻿@model DevHacks.Models.Category
+@{
+    ViewBag.Title = "New";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Adauga categorie</div>
+    <div class="panel-body">
+
+        <div class="panel panel-default " style="padding:10px">
+            @using (Html.BeginForm(actionName: "New", controllerName: "Category"))
+            {
+                @Html.Label("CategoryName", "Nume Categorie")
+                @Html.TextBox("CategoryName", null, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.CategoryName, null, new { @class = "text-danger " })
+
+                <br />
+                <button type="submit">Adauga categorie</button>
+            }
+        </div>
+
+    </div>
+</div>
+

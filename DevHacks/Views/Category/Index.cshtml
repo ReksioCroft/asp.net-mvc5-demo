@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="text-success">@ViewBag.Message</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Afisare Categorii</div>
+    <div class="panel-body">
+
+        @foreach (var category in ViewBag.Categories)
+        {
+            <div class="panel panel-default " style="padding:10px">
+                <h2>@category.CategoryName</h2>
+
+                <a href="/Category/Show/@category.CategoryId">Afisare categorie</a>
+                <br />
+                <hr />
+            </div>
+        }
+
+        <a href="/Category/New">Adauga categorie</a>
+    </div>
+</div>

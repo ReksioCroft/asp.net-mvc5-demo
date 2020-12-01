@@ -1,0 +1,36 @@
+﻿@model DevHacks.Models.Comment
+
+@{
+    ViewBag.Title = "EditPage";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Edit Comment</div>
+    <div class="panel-body">
+        @using (Html.BeginForm(actionName: "EditComment", controllerName: "Question"))
+        {
+
+            @Html.HttpMethodOverride(HttpVerbs.Put)
+
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+            @Html.Hidden("CommentId")
+
+            <br />
+
+            @Html.Label("CommentContent", "Continut comentariu")
+            <br />
+            @Html.EditorFor(m => m.CommentContent, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(m => m.CommentContent, null, new { @class = "text-danger" })
+
+            <br />
+            @Html.Hidden("CommentDate")
+            <br />
+
+
+
+            <button class="btn btn-success" type="submit">Modifica articol</button>
+        }
+    </div>
+
+</div>

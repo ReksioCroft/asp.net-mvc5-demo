@@ -1,0 +1,49 @@
+﻿@model DevHacks.Models.Article
+
+<div class="panel panel-primary">
+
+    <div class="panel-heading">Afisare Articole</div>
+    <div class="panel-body">
+        <h1 style="text-align:center">Articole</h1>
+        <br />
+        <br />
+        <br />
+
+
+        <div class="text-success">@ViewBag.Message</div>
+
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <a class="btn btn-primary btn btn-sm" href="/Article/New" style="float:right; margin-top:30px"> Adauga articol </a>
+
+                <form method="post" action="/Article/Index2">
+                    @Html.Label("Selectati categoria")
+                    @Html.DropDownListFor(m => m.CategoryId, new SelectList(Model.Categ, "Value", "Text"), "Afisati toate articolele", new { @class = "form-control" })
+                    <button type="submit" class="btn btn-primary btn btn-sm" style="margin-top:-60px; margin-left:300px">Afiseaza articole</button>
+                </form>
+            </div>
+        </div>
+
+        @foreach (var a in ViewBag.Articles)
+        {
+            <br />
+            <div class="panel panel-default">
+                <div class="panel-heading"> @a.ArticleName</div>
+                <div class="panel-body">
+                    <p>@a.ArticleContent</p>
+                    <p>@a.Category.CategoryName</p>
+                </div>
+                <div class="panel panel-footer" style="margin-bottom:0px">
+                    <a class="btn btn-primary btn btn-sm" href="/Article/Show/@a.ArticleId">Afisare articol</a>
+                    <p>@a.ArticleDate</p>
+                </div>
+            </div>
+        }
+
+
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-primary btn-sm" href="/Home">Pagina principala</a>
+    </div>
+</div>

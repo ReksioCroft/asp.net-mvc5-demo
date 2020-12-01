@@ -1,0 +1,246 @@
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\obj\Debug\DevHacks.csprojAssemblyReference.cache
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\obj\Debug\DevHacks.csproj.CoreCompileInputs.cache
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\DevHacks.dll.config
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\DevHacks.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\DevHacks.pdb
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\csc.exe
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\csc.exe.config
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\csc.rsp
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\csi.exe
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\csi.exe.config
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\csi.rsp
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.AppContext.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Console.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.IO.Compression.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.IO.Pipes.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Security.Claims.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.ValueTuple.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\vbc.exe
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\vbc.exe.config
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\vbc.rsp
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\VBCSCompiler.exe
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\Antlr3.Runtime.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\EntityFramework.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\EntityFramework.SqlServer.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\Newtonsoft.Json.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.Helpers.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.Mvc.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.Optimization.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.Razor.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.WebPages.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.WebPages.Razor.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\WebGrease.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\EntityFramework.xml
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\EntityFramework.SqlServer.xml
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.Helpers.xml
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.Mvc.xml
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.Optimization.xml
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.Razor.xml
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.WebPages.xml
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\System.Web.WebPages.Razor.xml
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\Newtonsoft.Json.xml
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\Antlr3.Runtime.pdb
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\obj\Debug\DevHacks.csproj.CopyComplete
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\obj\Debug\DevHacks.dll
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\obj\Debug\DevHacks.pdb
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\obj\Debug\DevHacks.Migrations.initial.resources
+C:\Users\ReksioCroft\source\repos\DevHacks\DevHacks\obj\Debug\DevHacks.csproj.GenerateResource.cache
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\DevHacks.dll.config
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\DevHacks.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\DevHacks.pdb
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\csc.exe
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\csc.exe.config
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\csc.rsp
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\csi.exe
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\csi.exe.config
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\csi.rsp
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.AppContext.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Console.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.IO.Compression.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.IO.Pipes.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Security.Claims.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.ValueTuple.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Xml.XPath.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\vbc.exe
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\vbc.exe.config
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\vbc.rsp
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\VBCSCompiler.exe
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\Antlr3.Runtime.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\EntityFramework.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\EntityFramework.SqlServer.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\Newtonsoft.Json.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.Helpers.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.Mvc.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.Optimization.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.Razor.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.WebPages.Deployment.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.WebPages.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.WebPages.Razor.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\WebGrease.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\EntityFramework.xml
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\EntityFramework.SqlServer.xml
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.Helpers.xml
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.Mvc.xml
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.Optimization.xml
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.Razor.xml
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.WebPages.xml
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.WebPages.Deployment.xml
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\System.Web.WebPages.Razor.xml
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\Newtonsoft.Json.xml
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\Antlr3.Runtime.pdb
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\obj\Debug\DevHacks.csprojAssemblyReference.cache
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\obj\Debug\DevHacks.csproj.CoreCompileInputs.cache
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\obj\Debug\DevHacks.csproj.CopyComplete
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\obj\Debug\DevHacks.dll
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\obj\Debug\DevHacks.pdb
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\obj\Debug\DevHacks.Migrations.Initial.resources
+C:\Users\George\Desktop\Ora 10 Dev\DevHacks\DevHacks\obj\Debug\DevHacks.csproj.GenerateResource.cache
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\DevHacks.dll.config
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\DevHacks.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\DevHacks.pdb
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\csc.exe
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\csc.exe.config
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\csc.rsp
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\csi.exe
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\csi.exe.config
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\csi.rsp
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.AppContext.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Console.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.IO.Compression.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.IO.Pipes.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Security.Claims.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.ValueTuple.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\vbc.exe
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\vbc.exe.config
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\vbc.rsp
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\VBCSCompiler.exe
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\Antlr3.Runtime.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\EntityFramework.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\EntityFramework.SqlServer.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\Newtonsoft.Json.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.Helpers.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.Mvc.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.Optimization.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.Razor.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.WebPages.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.WebPages.Razor.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\WebGrease.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\EntityFramework.xml
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\EntityFramework.SqlServer.xml
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.Helpers.xml
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.Mvc.xml
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.Optimization.xml
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.Razor.xml
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.WebPages.xml
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\System.Web.WebPages.Razor.xml
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\Newtonsoft.Json.xml
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\Antlr3.Runtime.pdb
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\obj\Debug\DevHacks.csprojAssemblyReference.cache
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\obj\Debug\DevHacks.Migrations.Initial.resources
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\obj\Debug\DevHacks.csproj.GenerateResource.cache
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\obj\Debug\DevHacks.csproj.CoreCompileInputs.cache
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\obj\Debug\DevHacks.csproj.CopyComplete
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\obj\Debug\DevHacks.dll
+C:\Users\ReksioCroft\Documents\GitHub\asp.net-mvc5-demo\DevHacks\obj\Debug\DevHacks.pdb

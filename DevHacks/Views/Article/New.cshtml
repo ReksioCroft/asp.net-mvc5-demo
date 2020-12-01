@@ -1,0 +1,29 @@
+﻿@model DevHacks.Models.Article
+<h1>Adauga Articol</h1>
+@using (Html.BeginForm(actionName: "New", controllerName: "Article"))
+{
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+    @Html.Label("ArticleName", "Nume Articol")
+    <br />
+    @Html.TextBox("ArticleName", null, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.ArticleName, null, new { @class = "text-danger" })
+
+    <br />
+    @Html.Label("ArticleContent", "Continut Articol")
+
+    @Html.TextBox("ArticleContent", null, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.ArticleContent, null, new { @class = "text-danger " })
+
+    <br />
+    @Html.Hidden("Rating")
+
+    @Html.Hidden("NumVotes")
+
+    @Html.Label("Selectati categoria articolului")
+    @Html.DropDownListFor(m => m.CategoryId, new SelectList(Model.Categ, "Value", "Text"), "Selectati categoria", new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.CategoryId, null, new { @class = "text-danger " })
+
+    <br />
+    <button type="submit">Adauga articol</button>
+}

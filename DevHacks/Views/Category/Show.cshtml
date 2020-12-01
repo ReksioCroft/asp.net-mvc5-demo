@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Show";
+}
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Afiseaza categorie</div>
+    <div class="panel-body">
+
+
+        <h2>Afisare categorie</h2>
+        <div class="panel panel-default " style="padding:10px">
+            <p>@ViewBag.Categories.CategoryName</p>
+        </div>
+
+        <div class="panel panel-default " style="padding:10px">
+            <form method="get" action="/Category/Edit/@ViewBag.Categories.CategoryId">
+                <button type="submit">Editeaza categorie</button>
+            </form>
+
+            <form method="post" action="/Category/Delete/@ViewBag.Categories.CategoryId">
+                @Html.HttpMethodOverride(HttpVerbs.Delete)
+                <button type="submit">Sterge categorie</button>
+            </form>
+        </div>
+
+        <a href="/Category/Index">Inapoi la Index</a>
+    </div>
+</div>

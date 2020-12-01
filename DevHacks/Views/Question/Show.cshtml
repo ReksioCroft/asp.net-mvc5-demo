@@ -1,0 +1,113 @@
+﻿@model DevHacks.Models.Question
+
+@{
+    /**/
+
+    ViewBag.Title = "Show";
+}
+
+    
+<div class="panel panel-primary">
+    <div class="panel-heading">Afisare Categorii</div>
+    <div class="panel-body">
+
+        <div class="panel panel-info">
+            <div class="panel-heading"> Titlu: @ViewBag.Question.QuestionTitle</div>
+            <div class="panel-body">
+                <p>Descriere: @ViewBag.Question.QuestionContent</p>
+                <p">Categoria: @ViewBag.Question.Category.CategoryName</p>
+                <p style="font-size:small">Data creere: @ViewBag.Question.QuestionDate</p>
+            </div>
+
+            <div class="panel-footer">
+                <form method="get" style="display:inline-block" action="/Question/Edit/@ViewBag.Question.QuestionId">
+                    <button type="submit" class="btn btn-success btn btn-sm">Editeaza intrebarea</button>
+                </form>
+
+
+                <form method="post" style="display:inline-block" action="/Question/Delete/@ViewBag.Question.QuestionId">
+                    @Html.HttpMethodOverride(HttpVerbs.Delete)
+                    <button type="submit" class="btn btn-success btn btn-sm">Sterge intrebarea</button>
+                </form>
+            </div>
+        </div>
+
+        <br />
+        <h2 style="font-size: 45px">Comentarii</h2>
+        <div class="text-success" ,  style = "color: black;">@ViewBag.Message</div>
+        <button type="button" class="btn btn-primary btn btn-sm" onclick="document.getElementById('newCommentField').style.display = 'block'">Adauga comentariu</button>
+        <br />
+        <br />
+
+        <div id="newCommentField" style="display: none">
+
+            <form method="post" action="/Question/NewComment/@ViewBag.Question.QuestionId">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        @Html.Label("CommentContent", "Adaugare comentariu")
+                    </div>
+                    <div class="panel-body">
+                        @Html.Editor("CommentContent")
+                    </div>
+                    <div class="panel panel-footer">
+                        <button class="btn btn-primary" type="submit">Adauga comentariu</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div style="width:60%">
+            @foreach (var comment in ViewBag.Comments)
+            {
+                <br />
+                <div class="panel panel-default">
+                    <div class="panel-heading"> Autor </div>
+                    <div class="panel-body">
+                        <p id=@(-comment.CommentId)> @comment.CommentContent</p>
+                        <div id=@comment.CommentId style="display:none">
+                            <form method="post" action="/Question/EditCommentInside/@comment.CommentId">
+                                @Html.HttpMethodOverride(HttpVerbs.Put)
+                                @Html.Hidden("CommentId")
+                                @Html.Hidden("QuestionId")
+                                @Html.Hidden("QuestionDate")
+                                @Html.Label("CommentContent", "Editeaza Comentariul")
+                                <br />
+                                <input type="text" class="form-control" name="CommentContent" value="@comment.CommentContent" />
+
+                                <button class="btn btn-primary" type="submit">Modifica comentariul</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="panel panel-footer" style="margin-bottom:0px;">
+                        <p>Data adaugarii: @comment.CommentDate</p>
+                        <div class="container">
+                            <div  class="row">
+                                <div style="display:inline-block">
+                                    <form method="get" action="/Question/EditComment/@comment.CommentId">
+                                        <button class="glyphicon glyphicon-pencil" type="submit"></button>
+                                    </form>
+                                </div>
+                                <div style=" display:inline-block">
+                                    <form method="post" action="/Question/DeleteComment/@comment.CommentId">
+                                        @Html.HttpMethodOverride(HttpVerbs.Delete)
+                                        <button class="glyphicon glyphicon-trash" type="submit"></button>
+                                    </form>
+                                </div>
+                                <div  style="display:inline-block">
+                                    <button type="button" onclick="document.getElementById(@comment.CommentId).style.display = 'block'" >Editare inline TODO...</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            }
+        </div>
+
+        <div class="panel-footer">
+            <a class="btn btn-primary" href="/Question/Index">Inapoi la Index</a>
+        </div>  
+    </div>
+</div>

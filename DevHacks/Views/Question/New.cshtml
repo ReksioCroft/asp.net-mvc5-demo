@@ -1,0 +1,30 @@
+﻿@model DevHacks.Models.Question
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Afisare Categorii</div>
+    <div class="panel-body">
+        <h1 style="font-size: 55px;">Adauga intrebare</h1>
+        @using (Html.BeginForm(actionName: "New", controllerName: "Question"))
+{
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+        @Html.Label("QuestionTitle", "Titlu Intrebare")
+        <br />
+        @Html.TextBox("QuestionTitle", null, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.QuestionTitle, null, new { @class = "text-danger" })
+        <br />
+        @Html.Label("QuestionContent", "Continut Intrebare")
+        @Html.TextBox("QuestionContent", null, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.QuestionContent, null, new { @class = "text-danger " })
+        <br />
+        @Html.Label("Selectati categoria")
+        @Html.DropDownListFor(m => m.CategoryId, new SelectList(Model.Categ, "Value", "Text"), "Selectati categoria", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CategoryId, null, new { @class = "text-danger " })
+        <br />
+        <div style="color:black">
+            <button type="submit">Adauga intrebare</button>
+        </div>
+}
+</div>
+</div>

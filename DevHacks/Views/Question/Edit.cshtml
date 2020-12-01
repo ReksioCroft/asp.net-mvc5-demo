@@ -1,0 +1,42 @@
+﻿@model DevHacks.Models.Question
+@{
+    ViewBag.TitlePage = "EditPage";
+}
+
+<h2 style="font-size: 55px; color: white">Edit</h2>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Edit Question</div>
+    <div class="panel-body">
+        @using (Html.BeginForm(actionName: "Edit", controllerName: "Question"))
+        {
+            @Html.HttpMethodOverride(HttpVerbs.Put)
+
+            @Html.ValidationSummary(false, "", new { @class = "text-danger", style = "width: 20px; background-color: black;" })
+
+            @Html.Hidden("QuestionId")
+
+            @Html.Label("QuestionTitle", "Titlu Intrebare")
+            <br />
+            @Html.Editor("QuestionTitle")
+            @Html.ValidationMessageFor(m => m.QuestionTitle, null, new { @class = "text-danger" })
+            <br />
+            @Html.Label("QuestionContent", "Continut intrebare")
+            <br />
+            @Html.EditorFor(m => m.QuestionContent, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(m => m.QuestionContent, null, new { @class = "text-danger " })
+            <br />
+            @Html.Hidden("QuestionDate")
+            <br />
+
+            @Html.Label("Selectati Categoria")
+
+            @Html.DropDownListFor(m => m.CategoryId, new SelectList(Model.Categ, "Value", "Text"),
+                     "Selectati categoria", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.CategoryId, null, new { @class = "text-danger " })
+            <br />
+
+            <button class="btn btn-success" type="submit">Modifica intrebare</button>
+        }
+    </div>
+</div>
