@@ -1,0 +1,39 @@
+﻿@model OpenDiscussionTavGeorge.Models.ApplicationUser
+@{
+    /**/
+
+    ViewBag.Title = "Show";
+}
+
+<div class="panel panel-primary">
+
+    <div class="panel-heading">Afisare intrebare</div>
+    <div class="panel-body">
+        <div class="panel panel-default">
+            <div class="panel-heading">Nume utilizator: @Model.UserName</div>
+            <div class="panel-body">
+                <i class="glyphicon glyphicon-envelope"></i> Email utilizator: <span class="label label-default">@Model.Email</span>
+                <br /><br />
+                @if (Model.PhoneNumber != null)
+                {
+                    <i class="glyphicon glyphicon-phone"></i>@:Telefon utilizator:<span class="label label-default">@Model.PhoneNumber</span>
+                    <br/><br/>
+                }
+                <i class="glyphicon glyphicon-th-list"></i> Rol utilizator: <span class="label label-default">@ViewBag.roleName</span>
+            </div>
+            <div class="panel-footer">
+                <form method="get" style="display:inline-block" action="/User/Edit/@Model.Id">
+                    <button type="submit" class="btn btn-success btn btn-sm">Editeaza Utilizator</button>
+                </form>
+
+                <form method="post" style="display:inline-block" action="/User/Delete/@Model.Id">
+                    @Html.HttpMethodOverride(HttpVerbs.Delete)
+                    <button type="submit" class="btn btn-success btn btn-sm">Sterge Utilizator</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-primary" href="/User/Index">Inapoi la Index</a>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = " Bun venit!";
+}
+
+<header class="u-clearfix u-header u-header" id="sec-073b">
+
+
+    <h1 class="u-custom-font u-text u-text-palette-1-dark-3 u-text-1" style="margin-top:70px; margin-left:20%; width:680px; font-size:100px">Invata sa inveti</h1>
+   
+    @if(User.Identity.IsAuthenticated)
+    {
+        <a href="/Question/Index" class="btn btn-primary" style="width:300px; margin-left:35%; margin-top:30px; height:60px; font-size:30px"> Pune o intrebare </a>
+        <br />
+        <a href="/Article/Index" class="btn btn-primary" style="width:300px; margin-left:35%; margin-top:30px; height:60px; font-size:30px">Scrie un articol</a>
+
+        if (User.IsInRole("Admin"))
+        {
+            <br />
+            <a href="/Category/Index" class="btn btn-primary" style="width:300px; margin-left:35%; margin-top:30px; height:60px; font-size:30px">Modifica o categorie</a>
+            <br />
+            <a href="/User/Index" class="btn btn-primary" style="width:300px; margin-left:35%; margin-top:30px; height:60px; font-size:30px">Modifica un utilizator</a>
+        }
+    }
+</header>
