@@ -3,6 +3,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using OpenDiscussionTavGeorge.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -17,11 +18,12 @@ namespace OpenDiscussionTavGeorge.Controllers
         public ActionResult Index()
         {
             var users = from user in db.Users
-                        orderby user.UserName
+                        orderby user.Roles.FirstOrDefault().RoleId, user.UserName
                         select user;
+
             ViewBag.UsersList = users;
             return View();
-        }        public ActionResult Show(string id)
+        }        [OverrideAuthorization]        [Authorize]        public ActionResult Show(string id)
         {
             ApplicationUser user = db.Users.Find(id);
 
@@ -33,14 +35,7 @@ namespace OpenDiscussionTavGeorge.Controllers
                                 select role.Name).First();
             ViewBag.roleName = userRoleName;
             return View(user);
-        }        public ActionResult Edit(string id)
-        {
-            ApplicationUser user = db.Users.Find(id);
-            user.AllRoles = GetAllRoles();
-            var userRole = user.Roles.FirstOrDefault();
-            ViewBag.userRole = userRole.RoleId;
-            return View(user);
-        }
+        }   
         [NonAction]
         public IEnumerable<SelectListItem> GetAllRoles()
         {
@@ -56,7 +51,18 @@ namespace OpenDiscussionTavGeorge.Controllers
             }
             return selectList;
         }
+        [OverrideAuthorization]
+        [Authorize]        public ActionResult Edit(string id)
+        {
+            ApplicationUser user = db.Users.Find(id);
+            user.AllRoles = GetAllRoles();
+            var userRole = user.Roles.FirstOrDefault();
+            ViewBag.userRole = userRole.RoleId;
+            return View(user);
+        }
+        [OverrideAuthorization]
         [HttpPut]
+        [Authorize]
         public ActionResult Edit(string id, ApplicationUser newData)
         {
 
@@ -74,20 +80,28 @@ namespace OpenDiscussionTavGeorge.Controllers
 
                 if (TryUpdateModel(user))
                 {
-                    user.UserName = newData.UserName;
-                    user.Email = newData.Email;
-                    user.PhoneNumber = newData.PhoneNumber;
-                    var roles = from role in db.Roles select role;
-                    foreach (var role in roles)
+                    if (User.Identity.GetUserId() == user.Id || User.IsInRole("Admin"))
                     {
-                        UserManager.RemoveFromRole(id, role.Name);
+                        user.UserName = newData.UserName;
+                        user.Email = newData.Email;
+                        user.PhoneNumber = newData.PhoneNumber;
+                        user.Description = newData.Description;
+                        if (User.IsInRole("Admin"))
+                        {
+                            var roles = from role in db.Roles select role;
+                            foreach (var role in roles)
+                            {
+                                UserManager.RemoveFromRole(id, role.Name);
+                            }
+                            var selectedRole =
+                            db.Roles.Find(HttpContext.Request.Params.Get("newRole"));
+                            UserManager.AddToRole(id, selectedRole.Name);
+                        }
+                        db.SaveChanges();
                     }
-                    var selectedRole =
-                    db.Roles.Find(HttpContext.Request.Params.Get("newRole"));
-                    UserManager.AddToRole(id, selectedRole.Name);
-                    db.SaveChanges();
                 }
-                return RedirectToAction("Index");
+
+                return RedirectToAction("Show", "User", new { @id = id });
             }
             catch (Exception e)
             {
@@ -103,11 +117,6 @@ namespace OpenDiscussionTavGeorge.Controllers
             var UserManager = new UserManager<ApplicationUser>(new
            UserStore<ApplicationUser>(context));
             var user = UserManager.Users.FirstOrDefault(u => u.Id == id);
-            var articles = db.Articles.Where(a => a.UserId == id);
-            foreach (var article in articles)
-            {
-                db.Articles.Remove(article);
-            }
             var questions = db.Questions.Where(a => a.UserId == id);
             foreach (var question in questions)
             {

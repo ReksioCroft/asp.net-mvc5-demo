@@ -15,24 +15,75 @@ namespace OpenDiscussionTavGeorge.Controllers
 
         private ApplicationDbContext db = ApplicationDbContext.Create();
 
-
         public ActionResult IndexAux(Question requestQuestion)
         {
-            return Redirect("/Question/Index/"+requestQuestion.CategoryId);
+
+            return Redirect("/Question/Index/" + requestQuestion.CategoryId + "/" + requestQuestion.Criterion);
         }
 
-        public ActionResult Index(int? id)
+        public ActionResult Index(int? id, int? criterion)
         {
+            if (criterion == null)
+                criterion = 0;
+
             ViewBag.indexId = id;
+            ViewBag.criterion = criterion;
+
             Question question = new Question();
             question.Categ = GetAllCategories();
 
-            var questions = (id == null || id == 0) ? from qs in db.Questions
-                                                      orderby qs.QuestionDate descending
-                                                      select qs : from qs in db.Questions
+
+
+            var questions = (id == null || id == 0) ?
+                                                    (
+                                                        criterion == 0 ?
+                                                          from qs in db.Questions
+                                                          orderby qs.QuestionDate descending
+                                                          select qs :
+                                                        (
+                                                            criterion == 1 ?
+                                                              from qs in db.Questions
+                                                              orderby qs.QuestionDate ascending
+                                                              select qs :
+                                                            (
+                                                                criterion == 2 ?
+                                                                  from qs in db.Questions
+                                                                  orderby qs.QuestionTitle ascending
+                                                                  select qs :
+
+                                                                      from qs in db.Questions
+                                                                      orderby qs.QuestionTitle descending
+                                                                      select qs
+                                                                 )
+                                                        )
+                                                    ) :
+                                                                 (
+                                                        criterion == 0 ?
+                                                          from qs in db.Questions
+                                                          where qs.CategoryId == id
+                                                          orderby qs.QuestionDate descending
+                                                          select qs :
+                                                        (
+                                                            criterion == 1 ?
+                                                              from qs in db.Questions
+                                                              where qs.CategoryId == id
+                                                              orderby qs.QuestionDate ascending
+                                                              select qs :
+                                                            (
+                                                                criterion == 2 ?
+                                                                  from qs in db.Questions
                                                                   where qs.CategoryId == id
-                                                                  orderby qs.QuestionDate descending
-                                                                  select qs;
+                                                                  orderby qs.QuestionTitle ascending
+                                                                  select qs :
+
+                                                                      from qs in db.Questions
+                                                                      where qs.CategoryId == id
+                                                                      orderby qs.QuestionTitle descending
+                                                                      select qs
+                                                                 )
+                                                        )
+                                                    );
+
 
             ViewBag.Questions = questions;
 
@@ -59,7 +110,7 @@ namespace OpenDiscussionTavGeorge.Controllers
 
             return View(question);
         }
-    
+
 
         [NonAction]
         public IEnumerable<SelectListItem> GetAllCategories()
@@ -97,7 +148,7 @@ namespace OpenDiscussionTavGeorge.Controllers
         public ActionResult New(Question question)
         {
             question.QuestionDate = DateTime.Now;
-            question.UserId =  User.Identity.GetUserId();
+            question.UserId = User.Identity.GetUserId();
             try
             {
                 if (ModelState.IsValid)
@@ -136,8 +187,16 @@ namespace OpenDiscussionTavGeorge.Controllers
         public ActionResult Edit(int id)
         {
             var question = db.Questions.Find(id);
-            question.Categ = GetAllCategories();
-            return View(question);
+            if (User.Identity.GetUserId() == question.UserId || User.IsInRole("Admin")||User.IsInRole("Moderator"))
+            {
+                question.Categ = GetAllCategories();
+                return View(question);
+            }
+            else
+            {
+                TempData["message"] = "Nu aveți această permisiune. Vă redirectez...";
+                return Redirect("/Question/Show/" + id);
+            }
         }
 
         [HttpPut]
@@ -151,12 +210,25 @@ namespace OpenDiscussionTavGeorge.Controllers
 
                     if (TryValidateModel(question))
                     {
-                        question.QuestionTitle = requestQuestion.QuestionTitle;
-                        question.QuestionContent = requestQuestion.QuestionContent;
-                        question.Category = requestQuestion.Category;
-                        question.CategoryId = requestQuestion.CategoryId;
-                        db.SaveChanges();
-                        TempData["message"] = "Intrebarea a fost modificat";
+                        if (User.Identity.GetUserId() == question.UserId || User.IsInRole("Moderator") || User.IsInRole("Admin"))
+                        {
+                            if (User.Identity.GetUserId() == question.UserId)
+                            {
+                                question.QuestionTitle = requestQuestion.QuestionTitle;
+                                question.QuestionContent = requestQuestion.QuestionContent;
+                            }
+                            if (User.IsInRole("Moderator") || User.IsInRole("Admin"))
+                            {
+                                question.Category = requestQuestion.Category;
+                                question.CategoryId = requestQuestion.CategoryId;
+                            }
+                            db.SaveChanges();
+                            TempData["message"] = "Intrebarea a fost modificat";
+                        }
+                        else
+                        {
+                            TempData["message"] = "Nu aveți această permisiune. Vă redirectez...";
+                        }
                     }
                     return RedirectToAction("Index");
                 }
@@ -178,9 +250,16 @@ namespace OpenDiscussionTavGeorge.Controllers
             try
             {
                 Question question = db.Questions.Find(id);
-                db.Questions.Remove(question);
-                db.SaveChanges();
-                TempData["message"] = "Intrebarea a fost stearsa";
+                if (User.Identity.GetUserId() == question.UserId || User.IsInRole("Admin") || User.IsInRole("Admin"))
+                {
+                    db.Questions.Remove(question);
+                    db.SaveChanges();
+                    TempData["message"] = "Intrebarea a fost stearsa";
+                }
+                else
+                {
+                    TempData["message"] = "Nu aveți această permisiune. Vă redirectez...";
+                }
                 return RedirectToAction("Index");
             }
             catch (Exception e)
@@ -222,10 +301,18 @@ namespace OpenDiscussionTavGeorge.Controllers
             try
             {
                 Comment comment = db.Comments.Find(id);
-                db.Comments.Remove(comment);
-                db.SaveChanges();
-                TempData["message"] = "Comentariul a fost sters";
-                return Redirect("/Question/Show/" + comment.QuestionId );
+                if (User.Identity.GetUserId() == comment.UserId || User.IsInRole("Admin") || User.IsInRole("Moderator"))
+                {
+
+                    db.Comments.Remove(comment);
+                    db.SaveChanges();
+                    TempData["message"] = "Comentariul a fost sters";
+                }
+                else
+                {
+                    TempData["message"] = "Nu aveți această permisiune. Vă redirectez...";
+                }
+                return Redirect("/Question/Show/" + comment.QuestionId);
             }
             catch (Exception e)
             {
@@ -239,21 +326,30 @@ namespace OpenDiscussionTavGeorge.Controllers
             try
             {
                 Comment comment = db.Comments.Find(id);
-           //     if (ModelState.IsValid)
-             //   {                                                          //TODO
+                if (User.Identity.GetUserId() == comment.UserId)
+                {
+
+                    //     if (ModelState.IsValid)
+                    //   {                                                          //TODO
                     // if (TryValidateModel(comment))
-                     //{
+                    //{
                     comment.CommentContent = requestComment.CommentContent;
                     db.SaveChanges();
                     TempData["message"] = "Comentariul a fost modificat";
                     //}
-               // }
-               // else
-                //{
-                   // TempData["message"] = "Comentariul NU a fost modificat";
+                    // }
+                    // else
+                    //{
+                    // TempData["message"] = "Comentariul NU a fost modificat";
 
-               // }
-                return Redirect("/Question/Show/" + comment.QuestionId );
+                    // }
+                }
+                else
+                {
+                    TempData["message"] = "Nu aveți această permisiune. Vă redirectez...";
+
+                }
+                return Redirect("/Question/Show/" + comment.QuestionId);
             }
             catch (Exception e)
             {
@@ -265,8 +361,76 @@ namespace OpenDiscussionTavGeorge.Controllers
         public ActionResult EditComment(int id)
         {
             var comment = db.Comments.Find(id);
-            return View(comment);
+            if (User.Identity.GetUserId() == comment.UserId)
+                return View(comment);
+            else
+            {
+                TempData["message"] = "Nu aveți această permisiune. Vă redirectez...";
+                return Redirect("/Question/Show/" + comment.QuestionId);
+            }
         }
+
+
+        public ActionResult Search()
+        {
+            var questions = db.Questions.Include("Category").OrderBy(a => a.QuestionDate);
+            var search = "";
+
+            if (Request.Params.Get("search") != null)
+            {
+                search = Request.Params.Get("search").Trim();
+
+                List<int> questionsIds = db.Questions.Where
+                    (
+                a => a.QuestionTitle.Contains(search) ||
+                a.QuestionContent.Contains(search)
+                    ).Select(a => a.QuestionId).ToList();
+
+                List<int> commentIds = db.Comments.Where
+                        (
+                    c => c.CommentContent.Contains(search)
+                        ).Select(com => com.CommentId).ToList();
+
+                List<int> mergedIds = questionsIds.Union(commentIds).ToList();
+
+
+                questions = db.Questions.Where(question => mergedIds.Contains(question.QuestionId)).OrderBy(a => a.QuestionDate);
+            }
+
+
+
+         
+
+            var totalItems = questions.Count();
+
+            var currentPage = Convert.ToInt32(Request.Params.Get("page"));
+
+            var offset = 0;
+
+            if (!currentPage.Equals(0))
+            {
+                offset = (currentPage - 1) * this._perPage;
+            }
+
+            if (TempData.ContainsKey("message"))
+            {
+                ViewBag.Message = TempData["message"];
+            }
+
+            var paginatedQuestions = questions.Skip(offset).Take(this._perPage);
+
+            ViewBag.total = totalItems;
+            ViewBag.lastPage = Math.Ceiling((float)totalItems / (float)this._perPage);
+            ViewBag.Questions = paginatedQuestions;
+            ViewBag.SearchString = search;
+
+            return View();
+        }
+
+
+
+
+
 
         [HttpPut]
         public ActionResult EditComment(int id, Comment requestComment)
@@ -278,9 +442,16 @@ namespace OpenDiscussionTavGeorge.Controllers
                 {
                     if (TryValidateModel(comment))
                     {
-                        comment.CommentContent = requestComment.CommentContent;
-                        db.SaveChanges();
-                        TempData["message"] = "Comentariul a fost modificat";
+                        if (User.Identity.GetUserId() == comment.UserId)
+                        {
+                            comment.CommentContent = requestComment.CommentContent;
+                            db.SaveChanges();
+                            TempData["message"] = "Comentariul a fost modificat";
+                        }
+                        else
+                        {
+                            TempData["message"] = "Nu aveți această permisiune. Vă redirectez...";
+                        }
                     }
                     else
                     {

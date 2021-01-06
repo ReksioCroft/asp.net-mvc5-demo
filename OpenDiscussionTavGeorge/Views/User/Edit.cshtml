@@ -22,11 +22,18 @@
     <br />
     @Html.EditorFor(m => m.PhoneNumber)
     <br /><br />
-    <i class="glyphicon glyphicon-th-list"></i>
-    <label>Selectati rolul</label>
-    @Html.DropDownList("newRole", new SelectList(Model.AllRoles, "Value", "Text",
-   ViewBag.userRole), null, new { @class = "form-control" })
+    @Html.Label("Description", "Descriere")
     <br />
+    @Html.EditorFor(m => m.Description)
+    <br /><br />
+    if (User.IsInRole("Admin"))
+    {
+        <i class="glyphicon glyphicon-th-list"></i>
+        <label>Selectati rolul</label>
+        @Html.DropDownList("newRole", new SelectList(Model.AllRoles, "Value", "Text",
+               ViewBag.userRole), null, new { @class = "form-control" })
+        <br />
+    }
     <button class="btn btn-sm btn-success" type="submit">
         Modifica datele
         utilizatorului

@@ -1,12 +1,12 @@
 ﻿@model OpenDiscussionTavGeorge.Models.Question
-
+@using Microsoft.AspNet.Identity
 @{
     /**/
 
     ViewBag.Title = "Show";
 }
 
-    
+
 <div class="panel panel-primary">
     <div class="panel-heading">Afisare Categorii</div>
     <div class="panel-body">
@@ -14,7 +14,8 @@
         <div class="panel panel-info">
             <div class="panel-heading"> Titlu: @ViewBag.Question.QuestionTitle</div>
             <div class="panel-body">
-                <p>Autor: @ViewBag.Question.User.UserName</p>
+                <p>Autor: <a href="/User/Show/@ViewBag.Question.User.Id"> @ViewBag.Question.User.UserName</a></p>
+
                 <p>Descriere: @ViewBag.Question.QuestionContent</p>
                 <p">
                     Categoria: @ViewBag.Question.Category.CategoryName</p>
@@ -22,21 +23,25 @@
             </div>
 
             <div class="panel-footer">
-                <form method="get" style="display:inline-block" action="/Question/Edit/@ViewBag.Question.QuestionId">
-                    <button type="submit" class="btn btn-success btn btn-sm">Editeaza intrebarea</button>
-                </form>
-
-
-                <form method="post" style="display:inline-block" action="/Question/Delete/@ViewBag.Question.QuestionId">
-                    @Html.HttpMethodOverride(HttpVerbs.Delete)
-                    <button type="submit" class="btn btn-success btn btn-sm">Sterge intrebarea</button>
-                </form>
+                @if (ViewBag.Question.User.Id == User.Identity.GetUserId() || User.IsInRole("Moderator") || User.IsInRole("Admin"))
+                {
+                    <form method="get" style="display:inline-block" action="/Question/Edit/@ViewBag.Question.QuestionId">
+                        <button type="submit" class="btn btn-success btn btn-sm">Editeaza intrebarea</button>
+                    </form>
+                }
+                @if (ViewBag.Question.User.Id == User.Identity.GetUserId() || User.IsInRole("Moderator") || User.IsInRole("Admin"))
+                {
+                    <form method="post" style="display:inline-block" action="/Question/Delete/@ViewBag.Question.QuestionId">
+                        @Html.HttpMethodOverride(HttpVerbs.Delete)
+                        <button type="submit" class="btn btn-success btn btn-sm">Sterge intrebarea</button>
+                    </form>
+                }
             </div>
         </div>
 
         <br />
         <h2 style="font-size: 45px">Comentarii</h2>
-        <div class="text-success" ,  style = "color: black;">@ViewBag.Message</div>
+        <div class="text-success" , style="color: black;">@ViewBag.Message</div>
         <button type="button" class="btn btn-primary btn btn-sm" onclick="document.getElementById('newCommentField').style.display = 'block'">Adauga comentariu</button>
         <br />
         <br />
@@ -86,21 +91,30 @@
                     <div class="panel panel-footer" style="margin-bottom:0px;">
                         <p>Data adaugarii: @comment.CommentDate</p>
                         <div class="container">
-                            <div  class="row">
-                                <div style="display:inline-block">
-                                    <form method="get" action="/Question/EditComment/@comment.CommentId">
-                                        <button class="glyphicon glyphicon-pencil" type="submit"></button>
-                                    </form>
-                                </div>
-                                <div style=" display:inline-block">
-                                    <form method="post" action="/Question/DeleteComment/@comment.CommentId">
-                                        @Html.HttpMethodOverride(HttpVerbs.Delete)
-                                        <button class="glyphicon glyphicon-trash" type="submit"></button>
-                                    </form>
-                                </div>
-                                <div  style="display:inline-block">
-                                    <button type="button" onclick="document.getElementById(@comment.CommentId).style.display = 'block'" >Editare inline TODO...</button>
-                                </div>
+                            <div class="row">
+                                @if (comment.User.Id == User.Identity.GetUserId())
+                                {
+                                    <div style="display:inline-block">
+                                        <form method="get" action="/Question/EditComment/@comment.CommentId">
+                                            <button class="glyphicon glyphicon-pencil" type="submit"></button>
+                                        </form>
+                                    </div>
+                                }
+                                @if (comment.User.Id == User.Identity.GetUserId() || User.IsInRole("Admin") || User.IsInRole("Moderator"))
+                                {
+                                    <div style=" display:inline-block">
+                                        <form method="post" action="/Question/DeleteComment/@comment.CommentId">
+                                            @Html.HttpMethodOverride(HttpVerbs.Delete)
+                                            <button class="glyphicon glyphicon-trash" type="submit"></button>
+                                        </form>
+                                    </div>
+                                }
+                                @if (comment.User.Id == User.Identity.GetUserId())
+                                {
+                                    <div style="display:inline-block">
+                                        <button type="button" onclick="document.getElementById(@comment.CommentId).style.display = 'block'">Editare inline TODO...</button>
+                                    </div>
+                                }
                             </div>
                         </div>
                     </div>
@@ -113,6 +127,6 @@
 
         <div class="panel-footer">
             <a class="btn btn-primary" href="/Question/Index">Inapoi la Index</a>
-        </div>  
+        </div>
     </div>
 </div>

@@ -13,7 +13,6 @@ namespace OpenDiscussionTavGeorge.Models
         [Required]
         public string CategoryName { get; set; }
         public virtual ICollection<Question> Questions { get; set; }
-        public virtual ICollection<Article> Articles { get; set; }
 
     }
 }

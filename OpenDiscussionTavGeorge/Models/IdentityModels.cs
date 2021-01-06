@@ -20,6 +20,8 @@ namespace OpenDiscussionTavGeorge.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public string Description { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -33,7 +35,6 @@ namespace OpenDiscussionTavGeorge.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Question> Questions { get; set; }
-        public DbSet<Article> Articles { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

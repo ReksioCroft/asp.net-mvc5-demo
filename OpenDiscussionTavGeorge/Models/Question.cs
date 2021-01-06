@@ -12,13 +12,13 @@ namespace OpenDiscussionTavGeorge.Models
         [Key]
         public int QuestionId { get; set; }
         [Required]
-        public string QuestionTitle{ get; set; }
+        public string QuestionTitle { get; set; }
         [Required]
-        public string QuestionContent{ get; set; }
-        [Required][DataType(DataType.DateTime)]
+        public string QuestionContent { get; set; }
+        [Required] [DataType(DataType.DateTime)]
         public DateTime QuestionDate { get; set; }
-    
-      
+
+
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
@@ -28,6 +28,8 @@ namespace OpenDiscussionTavGeorge.Models
 
         public virtual ICollection<Comment> Comments { get; set; }
         public IEnumerable<SelectListItem> Categ { get; set; }
+
+        public virtual int Criterion { get; set; }
 
     }
 }

@@ -7,7 +7,7 @@
 
 <div class="panel panel-primary">
 
-    <div class="panel-heading">Afisare intrebare</div>
+    <div class="panel-heading">Pagina Personala Utilizator</div>
     <div class="panel-body">
         <div class="panel panel-default">
             <div class="panel-heading">Nume utilizator: @Model.UserName</div>
@@ -17,9 +17,14 @@
                 @if (Model.PhoneNumber != null)
                 {
                     <i class="glyphicon glyphicon-phone"></i>@:Telefon utilizator:<span class="label label-default">@Model.PhoneNumber</span>
-                    <br/><br/>
+                    <br /><br />
                 }
                 <i class="glyphicon glyphicon-th-list"></i> Rol utilizator: <span class="label label-default">@ViewBag.roleName</span>
+                <br /><br/>
+                @if (Model.Description != null)
+                {
+                <i class="glyphicon glyphicon-info-sign"></i>  @:Descriere:  <span class="label label-default">@Model.Description</span>
+                }
             </div>
             <div class="panel-footer">
                 <form method="get" style="display:inline-block" action="/User/Edit/@Model.Id">
@@ -34,6 +39,9 @@
         </div>
     </div>
     <div class="panel-footer">
-        <a class="btn btn-primary" href="/User/Index">Inapoi la Index</a>
+        @if (User.IsInRole("Admin"))
+        {
+            <a class="btn btn-primary" href="/User/Index">Inapoi la Index</a>
+        }
     </div>
 </div>
