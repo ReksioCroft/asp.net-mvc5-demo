@@ -250,7 +250,7 @@ namespace OpenDiscussionTavGeorge.Controllers
             try
             {
                 Question question = db.Questions.Find(id);
-                if (User.Identity.GetUserId() == question.UserId || User.IsInRole("Admin") || User.IsInRole("Admin"))
+                if (User.Identity.GetUserId() == question.UserId || User.IsInRole("Admin") || User.IsInRole("Moderator"))
                 {
                     db.Questions.Remove(question);
                     db.SaveChanges();

@@ -83,7 +83,6 @@ namespace OpenDiscussionTavGeorge.Controllers
                     if (User.Identity.GetUserId() == user.Id || User.IsInRole("Admin"))
                     {
                         user.UserName = newData.UserName;
-                        user.Email = newData.Email;
                         user.PhoneNumber = newData.PhoneNumber;
                         user.Description = newData.Description;
                         if (User.IsInRole("Admin"))

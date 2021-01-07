@@ -13,8 +13,8 @@
 
         <div class="panel panel-default " style="padding:10px">
             <div>
-                <a class="btn btn-primary btn btn-sm" href="/Question/New" style="float:right; margin-top:30px"> Adauga intrebare </a>
 
+                <a class="btn btn-primary btn-sm pull-right" href="/Question/Search">Cautati o intrebare/cuvant</a>
                 <form method="get" action="/Question/IndexAux">
                     @Html.Label("Selectati categoria")
                     @Html.DropDownListFor(m => m.CategoryId, new SelectList(Model.Categ, "Value", "Text"), "Afisati toate intrebarile", new { @class = "form-control" })
@@ -33,8 +33,8 @@
 
                 </form>
 
-                <br/>
-                <a class="btn btn-primary btn-sm" href="/Question/Search">Cautati o intrebare/cuvant</a>
+                <br />
+                <a class="btn btn-primary btn btn-sm" href="/Question/New" style="float:right; margin-top:30px"> Adauga intrebare </a>
             </div>
         </div>
         @foreach (var a in ViewBag.Questions)

@@ -392,6 +392,12 @@ namespace OpenDiscussionTavGeorge.Controllers
             return View(model);
         }
 
+        [AllowAnonymous]
+        public ActionResult Index()
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
         //
         // POST: /Account/LogOff
         [HttpPost]
